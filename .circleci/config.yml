@@ -40,10 +40,10 @@ jobs:
 workflows:
   proj_pipeline:
     jobs:
-      - build
+      - build_repo
       - test:
           requires:
-            - build
+            - build_repo
       - analyze:
           requires:
             - test
